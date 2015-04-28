@@ -16,10 +16,14 @@ import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
 @Theme("valo")
-public class MapsTest74UI extends UI {
+public class GoogleMapsMarkerClearTestUI extends UI {
+
+    private static final String vaadinVersion = Version.getFullVersion();
+    private String versionString = String.format("Using Vaadin version %s",
+            vaadinVersion);
 
     @WebServlet(value = "/*", asyncSupported = true)
-    @VaadinServletConfiguration(productionMode = false, ui = MapsTest74UI.class, widgetset = "com.vaadin.googlemaps.Widgetset")
+    @VaadinServletConfiguration(productionMode = false, ui = GoogleMapsMarkerClearTestUI.class, widgetset = "com.vaadin.googlemaps.Widgetset")
     public static class Servlet extends VaadinServlet {
     }
 
@@ -30,8 +34,7 @@ public class MapsTest74UI extends UI {
         layout.setSpacing(true);
         setContent(layout);
 
-        Label versionLabel = new Label(String.format("Using Vaadin version %s",
-                Version.getFullVersion()));
+        Label versionLabel = new Label(versionString);
         layout.addComponent(versionLabel);
 
         final GoogleMap googleMap = new GoogleMap(null, null, null);
