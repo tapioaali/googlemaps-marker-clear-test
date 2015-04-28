@@ -8,6 +8,8 @@ This project serves also as a simple example Eclipse project for the add-on. Ple
 
     <dependency org="com.vaadin.tapio" name="googlemaps" rev="1.0.2" />
 
+By doing that Ivy will take care of the downloading of the required JARs.
+
 For full add-on check out its [GitHub page](https://github.com/tjkaal/GoogleMapsVaadin7). 
 
 The add-on is also available at [Vaadin Directory](https://vaadin.com/directory#!addon/googlemaps-add-on).
